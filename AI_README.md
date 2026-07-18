@@ -45,6 +45,7 @@
 - 新增带 SHA-256 的 `requirements.lock`；安装器先校验哈希并安装锁定依赖，再安装项目本身。
 - 安装器改为普通 wheel 安装语义；新增保留数据和彻底清理两种卸载路径。
 - 新增 CI、CodeQL、依赖更新、安全扫描、Issue/PR 模板、安装、安全模型和发布说明；第三方 GitHub Actions 固定到完整提交 SHA。
+- 首次推送后按 Dependabot 验证结果同步到 `checkout 7.0.0`、`setup-python 6.3.0` 和 CodeQL v3 当前提交，避免初始仓库立即积压已过期 Action PR。
 - 保留此前尚未提交的外部 Codex 提问/最终结果同步、恢复竞态修复、统计样式修复及其测试。
 
 ### 验证
