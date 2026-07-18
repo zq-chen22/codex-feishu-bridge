@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私密安全报告
+    url: https://github.com/zq-chen22/codex-feishu-bridge/security/advisories/new
+    about: 凭据泄漏、越权、远程执行或隐私问题请勿公开提交

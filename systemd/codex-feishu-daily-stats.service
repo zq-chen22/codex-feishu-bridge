@@ -1,0 +1,14 @@
+[Unit]
+Description=Codex Feishu Bridge daily task statistics
+Documentation=file://@PROJECT_ROOT@/README.md
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=@PROJECT_ROOT@
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-%h/.config/codex-feishu-bridge/secrets.env
+ExecStart="@PROJECT_ROOT@/.venv/bin/codex-feishu-bridge" --config %h/.config/codex-feishu-bridge/config.toml sync-daily-stats
+UMask=0077

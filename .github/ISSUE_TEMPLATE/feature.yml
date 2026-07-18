@@ -1,0 +1,28 @@
+name: 功能建议
+description: 提议一个真实使用场景中的改进
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 要解决的问题
+      description: 请先描述真实需要，而不是具体实现。
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: 当前流程与期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: 安全、隐私和兼容性影响
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 参与意愿
+      options:
+        - label: 我愿意协助测试或提交 PR

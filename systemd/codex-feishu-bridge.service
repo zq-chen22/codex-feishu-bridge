@@ -1,0 +1,21 @@
+[Unit]
+Description=Feixing Bridge for Codex and Feishu
+Documentation=file://@PROJECT_ROOT@/README.md
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@PROJECT_ROOT@
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-%h/.config/codex-feishu-bridge/secrets.env
+ExecStart="@PROJECT_ROOT@/.venv/bin/codex-feishu-bridge" --config %h/.config/codex-feishu-bridge/config.toml run
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=21630s
+KillMode=mixed
+UMask=0077
+
+[Install]
+WantedBy=default.target

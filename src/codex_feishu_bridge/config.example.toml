@@ -1,0 +1,81 @@
+# 复制到 ~/.config/codex-feishu-bridge/config.toml 后再修改。
+# App Secret 不得写入本文件；只填写对应的环境变量名。
+
+[bridge]
+state_dir = "~/.local/share/codex-feishu-bridge"
+database_path = "~/.local/share/codex-feishu-bridge/bridge.sqlite"
+inbox_dir = "~/.local/share/codex-feishu-bridge/inbox"
+outbox_dir = "~/.local/share/codex-feishu-bridge/outbox"
+admin_scratch_dir = "~/.local/share/codex-feishu-bridge/admin-scratch"
+managed_workspaces_dir = "~/.local/share/codex-feishu-bridge/workspaces"
+codex_bin = "codex"
+
+# 首次登记最近 3 个持久、顶层 Codex 对话；以后持续发现新近更新的对话。
+initial_thread_count = 3
+auto_discover_new_threads = true
+source_kinds = ["cli", "vscode", "appServer", "unknown"]
+sync_interval_seconds = 15
+
+# WebSocket 是实时主通道；历史 API 只用于补漏，并按对话最近活动逐级放缓。
+history_poll_seconds = 600
+history_poll_warm_seconds = 1800
+history_poll_idle_seconds = 3600
+history_poll_cold_seconds = 7200
+history_warm_after_seconds = 21600
+history_idle_after_seconds = 86400
+history_cold_after_seconds = 604800
+
+# 新卡前 2 分钟每 5 秒合并一次进展，之后严格限制为每 30 秒最多一次。
+progress_update_seconds = 5.0
+progress_initial_window_seconds = 120.0
+progress_steady_update_seconds = 30.0
+progress_heartbeat_seconds = 30.0
+progress_stale_seconds = 120.0
+
+# systemd 更新时先停止接新单，最多等待 6 小时让已接单任务和最终结果排空。
+shutdown_drain_timeout_seconds = 21600.0
+
+# 飞书图片和 view_image 都只向 Codex 提供物理重编码的 JPEG 代理。
+# 代理失败时禁止回退读取原图。桥不主动触发上下文压缩。
+image_proxy_max_edge = 1024
+image_proxy_jpeg_quality = 75
+
+group_suffix = "-你的机器名称"
+
+# 默认运行配置；键名与 Codex config.toml 对应。每个飞书对话仍可单独覆盖。
+# 不填写 model/effort/service_tier 时继承该机器上的 Codex 默认值。
+# model = "你的 Codex model id"
+# model_reasoning_effort = "high"
+# service_tier = "priority"
+approval_policy = "on-request"
+sandbox = "workspace-write"
+allowed_workspace_roots = ["~/.local/share/codex-feishu-bridge/workspaces"]
+
+# 默认禁止通过飞书把 Codex 切换为 never + danger-full-access。
+# 只有充分理解远程完全访问风险后，才在本机显式改为 true。
+allow_remote_full_access = false
+
+# 自动删除超过保留期的已完成消息正文和已解决审批记录；0 表示关闭。
+data_retention_days = 30
+
+max_download_bytes = 52428800
+max_upload_bytes = 31457280
+
+[daily_stats]
+# 复用已有共享电子表格；统计命令不会创建新表格。
+enabled = false
+spreadsheet_token = ""
+sheet_id = ""
+timezone = "Asia/Shanghai"
+
+[feishu]
+# 首次可先留空，再用 pair-code 与 Codex 机器人完成所有者配对。
+owner_conversation_open_id = ""
+owner_user_id = ""
+owner_union_id = ""
+pairing_code_ttl_seconds = 900
+
+[feishu.conversation]
+# 只服务于本机的飞书自建应用。
+app_id = ""
+app_secret_env = "FEISHU_CONVERSATION_APP_SECRET" # pragma: allowlist secret
