@@ -58,4 +58,4 @@
 - README 冻结基线 SHA-256：`a371a936d3dc3a1b0d6d082afc43735518f764f8ecdb1a1d21db648e77db0272`。
 - 已建立独立公开仓库 `zq-chen22/codex-feishu-bridge` 和干净初始历史；线上 Python 3.12/3.13、打包、密钥扫描及 CodeQL job 全部通过，过期依赖 PR 为 0。
 - GitHub 私密漏洞报告、依赖图、Dependabot 漏洞/恶意软件告警和安全更新已启用；仓库主题包含 `codex`、`python`、`feishu`。
-- 本条验证对应首次公开版本 `v0.3.0`；标签推送后由 Release 工作流生成 wheel、sdist、CycloneDX SBOM 和 SHA-256 清单。
+- 首次公开版本 `v0.3.0` 已发布；Release 工作流生成的 wheel、sdist、CycloneDX SBOM 和 SHA-256 清单已重新下载并通过哈希、包内容及 SBOM 解析验证。
