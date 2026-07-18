@@ -56,4 +56,6 @@
 - wheel 与 sdist 构建、Twine 元数据检查、发布内容检查、CycloneDX SBOM 生成和 systemd 单元验证通过。
 - 在全新 Python 3.12 虚拟环境中按锁文件安装，通过版本、依赖一致性、wheel 内配置模板及 `0600` 配置权限验证。
 - README 冻结基线 SHA-256：`a371a936d3dc3a1b0d6d082afc43735518f764f8ecdb1a1d21db648e77db0272`。
-- GitHub 干净初始历史、线上 CI、私密漏洞报告和发布页状态：待推送后写入。
+- 已建立独立公开仓库 `zq-chen22/codex-feishu-bridge` 和干净初始历史；线上 Python 3.12/3.13、打包、密钥扫描及 CodeQL job 全部通过，过期依赖 PR 为 0。
+- GitHub 私密漏洞报告、依赖图、Dependabot 漏洞/恶意软件告警和安全更新已启用；仓库主题包含 `codex`、`python`、`feishu`。
+- 本条验证对应首次公开版本 `v0.3.0`；标签推送后由 Release 工作流生成 wheel、sdist、CycloneDX SBOM 和 SHA-256 清单。
