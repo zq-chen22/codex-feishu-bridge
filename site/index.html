@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>如何用手机远程操作电脑上的 Codex？｜飞行桥</title>
+    <meta
+      name="description"
+      content="飞行桥把电脑上的 Codex 完整带进飞书移动端：从发起任务、查看实时进度、补充指令与文件，到接收并检查结果。手机端无需访问境外服务。"
+    >
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#3370ff">
+    <link rel="canonical" href="https://zq-chen22.github.io/codex-feishu-bridge/">
+    <link rel="alternate" hreflang="zh-CN" href="https://zq-chen22.github.io/codex-feishu-bridge/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="飞行桥">
+    <meta property="og:title" content="如何用手机远程操作电脑上的 Codex？｜飞行桥">
+    <meta
+      property="og:description"
+      content="从手机发起任务、查看进度、补充资料，再接收并检查 Codex 返回的结果。"
+    >
+    <meta property="og:url" content="https://zq-chen22.github.io/codex-feishu-bridge/">
+    <meta
+      property="og:image"
+      content="https://zq-chen22.github.io/codex-feishu-bridge/assets/feature-multi-device.png"
+    >
+    <meta property="og:image:alt" content="在飞书移动端同时协调多台设备上的 Codex">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "飞行桥",
+        "alternateName": "codex-feishu-bridge",
+        "description": "通过飞书移动端完整操作一台或多台 Linux 主机上的 Codex CLI。",
+        "codeRepository": "https://github.com/zq-chen22/codex-feishu-bridge",
+        "url": "https://zq-chen22.github.io/codex-feishu-bridge/",
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "programmingLanguage": "Python",
+        "runtimePlatform": "Linux"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="飞行桥首页">
+          <span class="brand-mark" aria-hidden="true">飞</span>
+          <span>飞行桥</span>
+        </a>
+        <div class="nav-links">
+          <a href="#workflow">工作方式</a>
+          <a href="#start">开始使用</a>
+          <a
+            class="nav-github"
+            href="https://github.com/zq-chen22/codex-feishu-bridge"
+            target="_blank"
+            rel="noreferrer"
+          >GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">开源 · 本地运行 · 面向中文开发者</p>
+          <h1>用手机，完整操作<br>电脑上的 Codex</h1>
+          <p class="hero-lead">
+            如何用手机远程操作电脑上的 Codex？飞行桥把完整工作会话带进飞书：从发起任务、实时查看进度，到补充资料、接收结果并继续对话。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/zq-chen22/codex-feishu-bridge">查看开源项目</a>
+            <a class="button secondary" href="#start">10 分钟开始</a>
+          </div>
+          <ul class="hero-facts" aria-label="核心特点">
+            <li>手机端无需代理</li>
+            <li>一台或多台主机</li>
+            <li>消息与文件双向流转</li>
+          </ul>
+        </div>
+
+        <div class="hero-card" aria-label="飞行桥工作闭环">
+          <p class="card-kicker">不是完成通知</p>
+          <p class="card-title">而是一段完整的<br>移动端 Codex 会话</p>
+          <ol class="mini-flow">
+            <li><span>01</span>手机发起任务</li>
+            <li><span>02</span>查看进度与计划</li>
+            <li><span>03</span>补充指令和资料</li>
+            <li><span>04</span>检查结果并继续</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="showcase shell" aria-labelledby="showcase-title">
+        <div class="section-heading">
+          <p class="eyebrow">整个过程，都在手机里</p>
+          <h2 id="showcase-title">从对话开始，到结果回来</h2>
+          <p>Codex 留在自己的设备上工作，你只需要打开飞书。</p>
+        </div>
+
+        <div class="phone-grid">
+          <figure class="phone-card">
+            <figcaption>
+              <span>01</span>
+              <strong>同时在多个设备上对话</strong>
+            </figcaption>
+            <img
+              src="assets/feature-multi-device.png"
+              alt="飞行桥在飞书中显示多台设备上的 Codex 会话"
+              width="916"
+              height="1717"
+              loading="eager"
+              fetchpriority="high"
+            >
+          </figure>
+
+          <figure class="phone-card">
+            <figcaption>
+              <span>02</span>
+              <strong>汇报实时进度和计划</strong>
+            </figcaption>
+            <img
+              src="assets/feature-progress-report.png"
+              alt="Codex 通过飞书卡片实时汇报任务进度与计划"
+              width="916"
+              height="1717"
+              loading="lazy"
+            >
+          </figure>
+
+          <figure class="phone-card">
+            <figcaption>
+              <span>03</span>
+              <strong>处理并下载图片</strong>
+            </figcaption>
+            <img
+              src="assets/feature-image-download.png"
+              alt="Codex 通过飞书返回处理完成的图片供手机下载"
+              width="916"
+              height="1717"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div class="shell">
+          <div class="section-heading compact">
+            <p class="eyebrow">为什么是聊天软件</p>
+            <h2 id="workflow-title">用最自然的方式协调 AI</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article>
+              <span class="feature-number">01</span>
+              <h3>随时发起</h3>
+              <p>直接在飞书中给不同主机上的 Codex 分配任务，不必回到电脑前。</p>
+            </article>
+            <article>
+              <span class="feature-number">02</span>
+              <h3>持续协调</h3>
+              <p>通过飞书卡片查看状态、进展与计划，并在执行过程中继续补充要求。</p>
+            </article>
+            <article>
+              <span class="feature-number">03</span>
+              <h3>双向流转</h3>
+              <p>从手机上传文件、图片和视频，也在任务完成后收取必要的交付物。</p>
+            </article>
+            <article>
+              <span class="feature-number">04</span>
+              <h3>国内移动端</h3>
+              <p>手机只需连接飞书；Codex 继续运行在能够访问相关服务的主机上。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="start shell" id="start" aria-labelledby="start-title">
+        <div>
+          <p class="eyebrow">10 分钟 · 无门槛</p>
+          <h2 id="start-title">让 Agent 帮你完成安装</h2>
+          <p>使用 Codex-5.6 或更高水平的 AI Agent 模型，拉取当前项目并遵循指令即可。</p>
+        </div>
+        <div class="start-actions">
+          <a class="button primary" href="https://github.com/zq-chen22/codex-feishu-bridge">前往 GitHub</a>
+          <a
+            class="text-link"
+            href="https://github.com/zq-chen22/codex-feishu-bridge/blob/main/docs/INSTALL.md"
+          >阅读安装文档 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <p><strong>飞行桥</strong> · Apache-2.0 开源</p>
+        <div>
+          <a href="https://github.com/zq-chen22/codex-feishu-bridge">源代码</a>
+          <a href="https://github.com/zq-chen22/codex-feishu-bridge/blob/main/SECURITY.md">安全披露</a>
+          <a href="https://github.com/zq-chen22/codex-feishu-bridge/releases">版本发布</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

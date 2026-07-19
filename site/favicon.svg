@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="飞行桥">
+  <defs>
+    <linearGradient id="blue" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6694ff"/>
+      <stop offset="1" stop-color="#2457d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="19" fill="url(#blue)"/>
+  <path d="M18 19h30v7H34v5h12v7H34v14h-8V38h-8v-7h8v-5h-8z" fill="#fff"/>
+</svg>

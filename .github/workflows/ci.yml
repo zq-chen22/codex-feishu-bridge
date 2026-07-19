@@ -40,6 +40,7 @@ jobs:
       - run: python -m build
       - run: twine check dist/*
       - run: python scripts/check-release.py dist
+      - run: python scripts/check-pages.py
 
   secrets:
     runs-on: ubuntu-latest
