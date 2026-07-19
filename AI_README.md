@@ -25,6 +25,8 @@
 - 新增离线站点检查，验证标题、描述、规范 URL、结构化数据、站点地图、本地链接和隐私标记。
 - 站点检查同时强制验证冻结 README 的 SHA-256，并已接入 CI；README 基线仍为 `a371a936d3dc3a1b0d6d082afc43735518f764f8ecdb1a1d21db648e77db0272`。
 - 仓库管理员已将 Pages 发布源设为 GitHub Actions；发布工作流先验证站点，再读取 Pages 配置并部署。
+- 正式搜索入口为 [飞行桥 GitHub Pages](https://zq-chen22.github.io/codex-feishu-bridge/)；线上 HTML 与仓库源文件哈希一致，HTTPS、展示素材、`robots.txt` 和 `sitemap.xml` 均验证可访问。
+- 首次 Pages 部署、CI 和 CodeQL 全部通过。
 
 ## 2026-07-18 · 首次法律开源落地
 
