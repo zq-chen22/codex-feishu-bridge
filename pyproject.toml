@@ -25,7 +25,7 @@ classifiers = [
 ]
 dependencies = [
   "httpx>=0.24,<1",
-  "lark-oapi==1.7.1",
+  "lark-oapi==1.7.3",
   "Pillow>=10,<13",
 ]
 
